@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: linear-gradient(rgba(240, 5, 5, 0.658),rgba(87, 83, 83, 0.658));
+}
+
+.clock_container {
+    width: 40vw;
+    height: 40vw;
+    background: url("Clock.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 20px auto;
+    position: relative;
+}
+
+.clock_container::before {
+    content: "Spider's time won't go bad";
+    color: rgb(14, 189, 189);
+    font-size: 2vw;
+    top: 66%;
+    left: 23%;
+    position: absolute;
+    -webkit-box-reflect: below 1% linear-gradient(transparent, rgba(240, 5, 5, 0.658));
+    text-shadow: 0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, .1),
+        0 0 5px rgba(0, 0, 0, .1),
+        0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .25),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
+}
+
+.cercle {
+    width: 20%;
+    height: 20%;
+    background-image: url(Flower.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    position: absolute;
+    top: 42%;
+    left: 39%;
+    z-index: 1;
+    animation: clock 10s linear infinite;
+    transition: .1s;
+}
+
+#hour,
+#minute,
+#second {
+    position: absolute;
+    transform-origin: bottom;
+}
+
+#hour {
+    background: red;
+    width: 0.3vw;
+    height: 13vw;
+    top: 20%;
+    left: 48%;
+    -webkit-box-reflect: left 1% linear-gradient(transparent, rgba(240, 5, 5, 0.658));
+}
+
+#minute {
+    background: teal;
+    width: 0.2vw;
+    height: 17vw;
+    top: 10%;
+    left: 48.4%;
+    -webkit-box-reflect: left 1% linear-gradient(transparent, rgba(231, 255, 14, 0.445));
+}
+
+#second {
+    background: green;
+    width: 0.2vw;
+    height: 18vw;
+    top: 7.6%;
+    left: 48%;
+    -webkit-box-reflect: left 1% linear-gradient(transparent, rgba(0, 252, 34, 0.445));
+}
+
+
+@keyframes clock {
+    100% {
+        /* background-color:green; */
+        transform: rotate(360deg);
+    }
+}
